@@ -1,0 +1,136 @@
+Feature Engineering (Advanced)
+
+Today's focus: techniques that dramatically improve model performance in real-world ML projects.
+
+🔹 Lesson 1: Feature Scaling (Standardization & Normalization)
+=====================================================================
+Why it matters:
+Most ML models perform better when features are on similar scales.
+
+Types of Scaling
+
+Standardization
+
+𝑋
+𝑠
+𝑐
+𝑎
+𝑙
+𝑒
+𝑑
+=
+𝑋
+−
+𝜇
+𝜎
+X
+scaled​
+
+=
+σ
+X−μ
+
+Useful for: Linear Regression, Logistic Regression, SVM, PCA
+
+Normalization (Min-Max)
+
+𝑋
+′
+=
+𝑋
+−
+𝑋
+𝑚
+𝑖
+𝑛
+𝑋
+𝑚
+𝑎
+𝑥
+−
+𝑋
+𝑚
+𝑖
+𝑛
+X
+′
+=
+X
+max
+	​
+−X
+min
+	​
+X−X
+min
+	​
+Useful for: Neural Networks, KNN
+Real-World Example:
+Scaling customer income before clustering helps avoid bias in K-Means.
+
+Video:
+🔗 Krish Naik – Feature Scaling Explained
+
+
+🔹 Lesson 2: Handling Imbalanced Data (SMOTE, Undersampling, Oversampling)
+===============================================================================
+Why it matters:
+Real-world datasets rarely have 50/50 class distribution — e.g., fraud cases are only 1%.
+
+Techniques
+SMOTE: Creates synthetic minority examples
+Random Oversampling: Duplicates minority samples
+Undersampling: Removes majority samples
+Real-World Example:
+Fraud detection models trained with SMOTE get higher recall.
+
+Video:
+🔗 StatQuest – Imbalanced Data Strategies
+
+
+🔹 Lesson 3: Feature Binning (Discretization)
+==================================================
+Convert continuous values into categories.
+Techniques
+Equal-width binning
+Equal-frequency binning
+Domain-based binning (age groups: 18–25, 26–35, etc.)
+Real-World Example:
+Banking risk models group customer ages for stability in scoring.
+
+Video:
+🔗 Codebasics – Binning Techniques
+
+
+🔹 Lesson 4: Polynomial Features
+======================================
+Add squared, cubic, and interaction terms to capture nonlinear patterns.
+
+Example
+----------
+Predicting house price:
+Add features like
+area²
+bedrooms × area
+This helps linear models behave like nonlinear ones.
+
+Video:
+🔗 Simplilearn – Polynomial Regression
+
+
+🔹 Lesson 5: Target Encoding
+===================================
+Convert categories into numerical values based on target averages.
+
+Example:
+----------
+If the target is "likelihood of purchase":
+Traffic_Source = Instagram → 0.62
+Traffic_Source = Google → 0.41
+Where it’s used:
+Customer conversion prediction
+Churn models
+
+Video:
+🔗 Krish Naik – Target Encoding Tutorial
+
